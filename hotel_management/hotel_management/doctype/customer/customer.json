@@ -44,7 +44,8 @@
   {
    "fieldname": "phone",
    "fieldtype": "Data",
-   "label": "Phone"
+   "label": "Phone",
+   "length": 11
   },
   {
    "fieldname": "email_address",
@@ -54,7 +55,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-07 11:17:04.050552",
+ "modified": "2022-10-07 16:03:52.412656",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Customer",

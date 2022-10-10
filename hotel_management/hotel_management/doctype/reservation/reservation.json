@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "RES-.###",
  "creation": "2022-10-07 13:19:47.293000",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,11 +11,15 @@
   "customer_name",
   "room_information",
   "room_type",
+  "room_price",
   "column_break_5",
   "check_in",
   "check_out",
   "range_of_date",
   "reservation_date",
+  "accommodation_price",
+  "section_break_10",
+  "restaurant",
   "amended_from"
  ],
  "fields": [
@@ -50,11 +55,12 @@
    "fieldname": "range_of_date",
    "fieldtype": "Int",
    "label": "Range of Date",
-   "non_negative": 1
+   "non_negative": 1,
+   "read_only": 1
   },
   {
    "fieldname": "reservation_date",
-   "fieldtype": "Datetime",
+   "fieldtype": "Date",
    "label": "Reservation Date"
   },
   {
@@ -75,15 +81,37 @@
   {
    "fieldname": "column_break_5",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "restaurant",
+   "fieldtype": "Table",
+   "label": "Restaurant ",
+   "options": "Restaurant Detail"
+  },
+  {
+   "fieldname": "accommodation_price",
+   "fieldtype": "Currency",
+   "label": "Accommodation Price"
+  },
+  {
+   "fetch_from": "room_information.price",
+   "fieldname": "room_price",
+   "fieldtype": "Currency",
+   "label": "Room Price"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-07 13:42:01.280154",
+ "modified": "2022-10-10 14:18:53.555168",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Reservation",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
