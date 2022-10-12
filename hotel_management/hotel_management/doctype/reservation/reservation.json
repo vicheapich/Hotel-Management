@@ -20,6 +20,7 @@
   "accommodation_price",
   "section_break_10",
   "restaurant",
+  "restaurant_total",
   "amended_from"
  ],
  "fields": [
@@ -89,7 +90,7 @@
   {
    "fieldname": "restaurant",
    "fieldtype": "Table",
-   "label": "Restaurant ",
+   "label": "Restaurant",
    "options": "Restaurant Detail"
   },
   {
@@ -102,12 +103,17 @@
    "fieldname": "room_price",
    "fieldtype": "Currency",
    "label": "Room Price"
+  },
+  {
+   "fieldname": "restaurant_total",
+   "fieldtype": "Currency",
+   "label": "Restaurant Total"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-10 14:18:53.555168",
+ "modified": "2022-10-12 10:31:09.714068",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Reservation",

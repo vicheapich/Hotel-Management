@@ -8,7 +8,9 @@
  "engine": "InnoDB",
  "field_order": [
   "item",
-  "price"
+  "quantity",
+  "price",
+  "amount"
  ],
  "fields": [
   {
@@ -20,11 +22,21 @@
    "fieldname": "price",
    "fieldtype": "Currency",
    "label": "Price"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Data",
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Data",
+   "label": "Amount"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-10 08:52:23.418519",
+ "modified": "2022-10-11 14:00:20.718712",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Restaurant Item",

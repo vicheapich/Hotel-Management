@@ -7,8 +7,11 @@
  "engine": "InnoDB",
  "field_order": [
   "reservation",
+  "customer_name",
+  "room_id",
+  "restaurant_total",
+  "accommodation_price",
   "transaction_date",
-  "payment",
   "amended_from"
  ],
  "fields": [
@@ -24,12 +27,6 @@
    "label": "Transaction Date"
   },
   {
-   "fieldname": "payment",
-   "fieldtype": "Link",
-   "label": "Payment",
-   "options": "Payment"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -37,12 +34,36 @@
    "options": "Transaction",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fetch_from": "reservation.restaurant_total",
+   "fieldname": "restaurant_total",
+   "fieldtype": "Currency",
+   "label": "Restaurant Total"
+  },
+  {
+   "fetch_from": "reservation.accommodation_price",
+   "fieldname": "accommodation_price",
+   "fieldtype": "Currency",
+   "label": "Accommodation Price"
+  },
+  {
+   "fetch_from": "reservation.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "reservation.room_information",
+   "fieldname": "room_id",
+   "fieldtype": "Data",
+   "label": "Room ID"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-10 11:42:29.015136",
+ "modified": "2022-10-12 11:35:26.864066",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Transaction",

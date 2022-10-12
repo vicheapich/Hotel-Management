@@ -20,8 +20,6 @@ class Reservation(Document):
 			frappe.throw("Sorry!!! this room is be long to other Reservation")
 		elif room_infor.status == "Available":
 			frappe.msgprint("Please check your information before submit")
-			room_infor.status = "Unavailable"
-			room_infor.save()
 
 		#check date in can me less than Reservation date
 		if self.check_in < self.reservation_date:
@@ -29,9 +27,12 @@ class Reservation(Document):
 
 		#compute accommodation price (price for stay)
 		self.accommodation_price = self.room_price * self.range_of_date
-
-		#discount for person who pay more than 50 dis 5% and 100 dis 10%
-		if self.accommodation_price >= 50:
-			room_discount = self.accommodation_price - (self.accommodation_price * 0.05)
-		elif self.accommodation_price >= 100:
-			room_discount = self.accommodation_price - (self.accommodation_price * 0.1 )
+	def before_submit(self):
+		room_infor = frappe.get_doc("Room Information", self.room_information)
+		room_infor.status = "Unavailable"
+		room_infor.save()
+		# #discount for person who pay more than 50 dis 5% and 100 dis 10%
+		# if self.accommodation_price >= 50:
+		# 	room_discount = self.accommodation_price - (self.accommodation_price * 0.05)
+		# elif self.accommodation_price >= 100:
+		# 	room_discount = self.accommodation_price - (self.accommodation_price * 0.1 )

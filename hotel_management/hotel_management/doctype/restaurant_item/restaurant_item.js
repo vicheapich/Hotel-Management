@@ -3,6 +3,6 @@
 
 frappe.ui.form.on('Restaurant Item', {
 	// refresh: function(frm) {
-
+		
 	// }
 });
