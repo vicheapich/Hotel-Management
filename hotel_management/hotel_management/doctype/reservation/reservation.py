@@ -8,9 +8,13 @@ from frappe.utils.data import date_diff
 class Reservation(Document):
 	def before_save(self):
 		#find range of date 
-		self.range_of_date = date_diff(self.check_out, self.check_in)
+		self.range_of_date = date_diff(self.check_out, self.check_in) + 1
 		if self.range_of_date == 0: #check range of date can't be 0
 			frappe.throw("Invaild value for Check Out!! Plz check it out!!! ")
+			
+		#check date in can me less than Reservation date
+		if self.check_in < self.reservation_date:
+			frappe.throw("Sorry Check In must be during or after Reservation")
 
 		# checking room status 
 		room_infor = frappe.get_doc("Room Information", self.room_information)
@@ -21,18 +25,15 @@ class Reservation(Document):
 		elif room_infor.status == "Available":
 			frappe.msgprint("Please check your information before submit")
 
-		#check date in can me less than Reservation date
-		if self.check_in < self.reservation_date:
-			frappe.throw("Sorry Check In must be during or after Reservation")
-
 		#compute accommodation price (price for stay)
-		self.accommodation_price = self.room_price * self.range_of_date
-	def before_submit(self):
+		#self.accommodation_price = self.room_price * self.range_of_date
+
+	#change status room when on_submit and on_cancel
+	def on_submit(self):
 		room_infor = frappe.get_doc("Room Information", self.room_information)
 		room_infor.status = "Unavailable"
 		room_infor.save()
-		# #discount for person who pay more than 50 dis 5% and 100 dis 10%
-		# if self.accommodation_price >= 50:
-		# 	room_discount = self.accommodation_price - (self.accommodation_price * 0.05)
-		# elif self.accommodation_price >= 100:
-		# 	room_discount = self.accommodation_price - (self.accommodation_price * 0.1 )
+	def on_cancel(self):
+		room_infor = frappe.get_doc("Room Information", self.room_information)
+		room_infor.status = "Available"
+		room_infor.save()

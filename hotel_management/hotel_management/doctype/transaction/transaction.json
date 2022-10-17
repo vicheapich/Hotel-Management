@@ -9,9 +9,13 @@
   "reservation",
   "customer_name",
   "room_id",
+  "column_break_4",
   "restaurant_total",
-  "accommodation_price",
   "transaction_date",
+  "accommodation_price",
+  "section_break_8",
+  "facilities",
+  "total_facilities",
   "amended_from"
  ],
  "fields": [
@@ -25,15 +29,6 @@
    "fieldname": "transaction_date",
    "fieldtype": "Date",
    "label": "Transaction Date"
-  },
-  {
-   "fieldname": "amended_from",
-   "fieldtype": "Link",
-   "label": "Amended From",
-   "no_copy": 1,
-   "options": "Transaction",
-   "print_hide": 1,
-   "read_only": 1
   },
   {
    "fetch_from": "reservation.restaurant_total",
@@ -58,12 +53,40 @@
    "fieldname": "room_id",
    "fieldtype": "Data",
    "label": "Room ID"
+  },
+  {
+   "fieldname": "facilities",
+   "fieldtype": "Table",
+   "label": "Facilities",
+   "options": "Facilities"
+  },
+  {
+   "fieldname": "total_facilities",
+   "fieldtype": "Currency",
+   "label": "Total Facilities"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Transaction",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-12 11:35:26.864066",
+ "modified": "2022-10-17 09:24:38.042572",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Transaction",
