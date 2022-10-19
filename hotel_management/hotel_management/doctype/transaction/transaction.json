@@ -10,13 +10,16 @@
   "customer_name",
   "room_id",
   "column_break_4",
-  "restaurant_total",
   "transaction_date",
   "accommodation_price",
-  "section_break_8",
+  "status",
+  "amended_from",
+  "section_break_11",
+  "restaurant",
+  "restaurant_total",
+  "section_break_12",
   "facilities",
-  "total_facilities",
-  "amended_from"
+  "total_facilities"
  ],
  "fields": [
   {
@@ -31,7 +34,6 @@
    "label": "Transaction Date"
   },
   {
-   "fetch_from": "reservation.restaurant_total",
    "fieldname": "restaurant_total",
    "fieldtype": "Currency",
    "label": "Restaurant Total"
@@ -55,12 +57,6 @@
    "label": "Room ID"
   },
   {
-   "fieldname": "facilities",
-   "fieldtype": "Table",
-   "label": "Facilities",
-   "options": "Facilities"
-  },
-  {
    "fieldname": "total_facilities",
    "fieldtype": "Currency",
    "label": "Total Facilities"
@@ -70,10 +66,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_8",
-   "fieldtype": "Section Break"
-  },
-  {
    "fieldname": "amended_from",
    "fieldtype": "Link",
    "label": "Amended From",
@@ -81,12 +73,38 @@
    "options": "Transaction",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Paid\nUnpaid"
+  },
+  {
+   "fieldname": "restaurant",
+   "fieldtype": "Table",
+   "label": "Restaurant",
+   "options": "Restaurant Detail"
+  },
+  {
+   "fieldname": "section_break_11",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "facilities",
+   "fieldtype": "Table",
+   "label": "Facilities",
+   "options": "Facilities"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-17 09:24:38.042572",
+ "modified": "2022-10-18 16:05:31.903984",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Transaction",

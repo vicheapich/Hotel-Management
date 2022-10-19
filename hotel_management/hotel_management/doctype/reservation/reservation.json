@@ -18,9 +18,7 @@
   "range_of_date",
   "reservation_date",
   "accommodation_price",
-  "section_break_10",
-  "restaurant",
-  "restaurant_total",
+  "status",
   "amended_from"
  ],
  "fields": [
@@ -83,16 +81,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_10",
-   "fieldtype": "Section Break"
-  },
-  {
-   "fieldname": "restaurant",
-   "fieldtype": "Table",
-   "label": "Restaurant",
-   "options": "Restaurant Detail"
-  },
-  {
    "fieldname": "accommodation_price",
    "fieldtype": "Currency",
    "label": "Accommodation Price"
@@ -104,15 +92,16 @@
    "label": "Room Price"
   },
   {
-   "fieldname": "restaurant_total",
-   "fieldtype": "Currency",
-   "label": "Restaurant Total"
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Checked In\nCancelled"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2022-10-13 15:17:38.328231",
+ "modified": "2022-10-19 09:04:20.717323",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Reservation",
