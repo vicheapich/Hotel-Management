@@ -2,35 +2,55 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "field:room_name",
- "creation": "2022-10-07 11:38:21.026722",
+ "creation": "2022-10-31 13:26:10.546172",
  "doctype": "DocType",
+ "document_type": "Document",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "room_name",
-  "room_type"
+  "room_price",
+  "room_type",
+  "room_status",
+  "description"
  ],
  "fields": [
   {
    "fieldname": "room_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Room Name",
    "unique": 1
   },
   {
-   "default": "Single Room",
+   "fieldname": "room_price",
+   "fieldtype": "Currency",
+   "label": "Room Price"
+  },
+  {
    "fieldname": "room_type",
    "fieldtype": "Select",
    "label": "Room Type",
    "options": "Single Room\nDouble Room\nDeluxe Room\nMeeting Room"
+  },
+  {
+   "fieldname": "room_status",
+   "fieldtype": "Select",
+   "label": "Room Status",
+   "options": "Available\nUnavailable\nIssued"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-31 15:02:26.144308",
+ "modified": "2022-11-03 14:42:32.508974",
  "modified_by": "Administrator",
  "module": "Hotel Management",
- "name": "Room Type",
+ "name": "Room Type Parent",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
@@ -48,8 +68,10 @@
   }
  ],
  "quick_entry": 1,
+ "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "room_price",
  "track_changes": 1
 }

@@ -38,7 +38,7 @@ class Reservation(Document):
 		if self.check_in < self.reservation_date:
 			frappe.throw("Sorry Check In must be during or after Reservation")
 
-		# #checking room status 
+		# #checking room status
 		# room_infor = frappe.get_doc("Room Information", self.room_information)
 		# if room_infor.status == "Issued":
 		# 	frappe.throw("Sorry!!! this room can't use because is has a problems")
@@ -46,6 +46,7 @@ class Reservation(Document):
 		# # 	frappe.throw("Sorry!!! this room is be long to other Reservation")
 		# elif room_infor.status == "Available":
 		# 	frappe.msgprint("Please check your information before submit")
+		
 
 
 

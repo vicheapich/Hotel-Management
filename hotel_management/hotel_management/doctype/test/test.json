@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-10-31 08:24:06.142523",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "check_in",
+  "check_out",
+  "range_of_date",
+  "users",
+  "restaurant",
+  "room"
+ ],
+ "fields": [
+  {
+   "fieldname": "room",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "Room",
+   "options": "Room Child"
+  },
+  {
+   "fieldname": "check_in",
+   "fieldtype": "Date",
+   "label": "Check In"
+  },
+  {
+   "fieldname": "check_out",
+   "fieldtype": "Date",
+   "label": "Check Out"
+  },
+  {
+   "default": "0",
+   "fieldname": "restaurant",
+   "fieldtype": "Check",
+   "label": "Restaurant"
+  },
+  {
+   "fieldname": "range_of_date",
+   "fieldtype": "Int",
+   "label": "Range of Date"
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table MultiSelect",
+   "label": "Users",
+   "options": "Multi Select User"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-11-04 08:50:29.666564",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "Test",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

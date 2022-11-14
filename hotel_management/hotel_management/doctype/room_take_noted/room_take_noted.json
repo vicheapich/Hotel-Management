@@ -1,36 +1,46 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:room_name",
- "creation": "2022-10-07 11:38:21.026722",
+ "autoname": "TN-.####",
+ "creation": "2022-11-01 09:28:20.881940",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "room_name",
-  "room_type"
+  "check_in",
+  "check_out",
+  "range_of_date",
+  "room"
  ],
  "fields": [
   {
-   "fieldname": "room_name",
+   "fieldname": "check_in",
    "fieldtype": "Data",
-   "label": "Room Name",
-   "unique": 1
+   "label": "Check In"
   },
   {
-   "default": "Single Room",
-   "fieldname": "room_type",
-   "fieldtype": "Select",
-   "label": "Room Type",
-   "options": "Single Room\nDouble Room\nDeluxe Room\nMeeting Room"
+   "fieldname": "check_out",
+   "fieldtype": "Data",
+   "label": "Check Out"
+  },
+  {
+   "fieldname": "room",
+   "fieldtype": "Table",
+   "label": "Room ",
+   "options": "Room Child"
+  },
+  {
+   "fieldname": "range_of_date",
+   "fieldtype": "Data",
+   "label": "Range of Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-31 15:02:26.144308",
+ "modified": "2022-11-01 14:26:18.202372",
  "modified_by": "Administrator",
  "module": "Hotel Management",
- "name": "Room Type",
+ "name": "Room Take Noted",
  "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [

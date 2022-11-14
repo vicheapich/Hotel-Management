@@ -19,7 +19,10 @@
   "restaurant_total",
   "section_break_12",
   "facilities",
-  "total_facilities"
+  "total_facilities",
+  "section_break_15",
+  "tax",
+  "total_tax"
  ],
  "fields": [
   {
@@ -34,6 +37,7 @@
    "label": "Transaction Date"
   },
   {
+   "default": "0",
    "fieldname": "restaurant_total",
    "fieldtype": "Currency",
    "label": "Restaurant Total"
@@ -57,6 +61,7 @@
    "label": "Room ID"
   },
   {
+   "default": "0",
    "fieldname": "total_facilities",
    "fieldtype": "Currency",
    "label": "Total Facilities"
@@ -99,12 +104,28 @@
    "fieldtype": "Table",
    "label": "Facilities",
    "options": "Facilities"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Table",
+   "label": "Tax",
+   "options": "Tax"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_tax",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Tax"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2022-10-18 16:05:31.903984",
+ "modified": "2022-10-31 13:23:35.997423",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Transaction",

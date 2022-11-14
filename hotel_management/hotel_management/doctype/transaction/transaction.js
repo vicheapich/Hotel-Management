@@ -16,7 +16,7 @@ frappe.ui.form.on("Transaction",{
 					if(row.facilities_name==item.facilities_name){
 						row.facilities_name ='';
 						frappe.throw("Sorry!!! facilities can't be duplicate.")
-						frm.refresh_field('facilities_name')
+						frm.clear_table('facilities_name')
 					}
 				}
 			});
@@ -29,7 +29,7 @@ frappe.ui.form.on("Transaction",{
 					if(row.item==item.item){
 						row.item ='';
 						frappe.throw("Sorry!!! item can't be duplicate.")
-						frm.refresh_field('item')
+						frm.clear_table('item')
 					}
 				}
 			});
@@ -105,3 +105,25 @@ frappe.ui.form.on("Restaurant Detail", {
 		 frm.set_value('restaurant_total', total);
 	}
 });
+
+frappe.ui.form.on("Tax",{
+	tax: function (frm, ctd, cdn) {
+		let lst = frm.doc.tax
+		let total = 0
+		$.each(lst, (i, v) => {
+			total += parseFloat(v.price)
+		})
+		console.log(total)
+		frm.set_value('total_tax', total);
+	//remove item and calculate it again
+	},
+	tax_remove: function(frm, cdt, cdn){
+		let lst = frm.doc.tax
+		let total = 0
+		$.each(lst, (i, v) => {
+			total += parseFloat(v.price)
+		})
+		// console.log(total)
+		 frm.set_value('total_tax', total);
+	}
+})

@@ -9,17 +9,20 @@
  "field_order": [
   "customer",
   "customer_name",
+  "check_in",
+  "check_out",
+  "column_break_5",
   "room_information",
   "room_type",
   "room_price",
-  "column_break_5",
-  "check_in",
-  "check_out",
   "range_of_date",
   "reservation_date",
   "accommodation_price",
   "status",
-  "amended_from"
+  "amended_from",
+  "section_break_14",
+  "test_button",
+  "room_test"
  ],
  "fields": [
   {
@@ -95,13 +98,27 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Checked In\nCancelled"
+   "options": "On the way\nChecked In\nCancelled"
+  },
+  {
+   "fieldname": "room_test",
+   "fieldtype": "Table",
+   "label": "Room Test",
+   "options": "Room Child"
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "test_button",
+   "fieldtype": "Button",
+   "label": "Test Button"
   }
  ],
  "index_web_pages_for_search": 1,
- "is_submittable": 1,
  "links": [],
- "modified": "2022-10-19 09:04:20.717323",
+ "modified": "2022-10-31 16:05:52.226115",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Reservation",

@@ -1,33 +1,43 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2022-10-10 10:31:32.740761",
+ "autoname": "field:user_name",
+ "creation": "2022-10-31 08:21:35.126250",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "reservation",
-  "payment_date"
+  "user_name",
+  "user_age",
+  "status"
  ],
  "fields": [
   {
-   "fieldname": "reservation",
-   "fieldtype": "Link",
-   "label": "Reservation",
-   "options": "Reservation"
+   "fieldname": "user_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User name ",
+   "unique": 1
   },
   {
-   "fieldname": "payment_date",
-   "fieldtype": "Date",
-   "label": "Payment Date"
+   "fieldname": "user_age",
+   "fieldtype": "Data",
+   "label": "User age"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Hi\nHello\nBello"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-10 10:31:32.740761",
+ "modified": "2022-11-04 08:43:18.481742",
  "modified_by": "Administrator",
  "module": "Hotel Management",
- "name": "Payment",
+ "name": "Test User",
+ "naming_rule": "Expression (old style)",
  "owner": "Administrator",
  "permissions": [
   {
@@ -47,5 +57,6 @@
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
+ "title_field": "user_name",
  "track_changes": 1
 }

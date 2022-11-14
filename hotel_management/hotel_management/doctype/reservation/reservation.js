@@ -17,8 +17,8 @@ frappe.ui.form.on("Reservation", {
 		frm.doc.accommodation_price = frm.doc.range_of_date * frm.doc.room_price
 		refresh_field("accommodation_price");
 
-	}
-});
+	},
+})
 
 
 const calculateDate = (check_in = '', check_out ='') => {

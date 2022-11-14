@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2022-10-31 13:27:50.759184",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "room_type",
+  "room_name",
+  "room_price",
+  "room_status",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "room_name",
+   "fieldtype": "Link",
+   "label": "Room Name",
+   "options": "Room Type Parent"
+  },
+  {
+   "fieldname": "room_price",
+   "fieldtype": "Currency",
+   "label": "Room Price"
+  },
+  {
+   "fieldname": "room_type",
+   "fieldtype": "Select",
+   "label": "Room Type",
+   "options": "\nSingle Room\nDouble Room\nDeluxe Room\nMeeting Room"
+  },
+  {
+   "fieldname": "room_status",
+   "fieldtype": "Data",
+   "label": "Room Status"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-14 11:13:41.849564",
+ "modified_by": "Administrator",
+ "module": "Hotel Management",
+ "name": "Room Child",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
