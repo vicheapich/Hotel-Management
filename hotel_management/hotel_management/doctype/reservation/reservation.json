@@ -11,18 +11,17 @@
   "customer_name",
   "check_in",
   "check_out",
+  "range_of_date",
+  "reservation_date",
   "column_break_5",
   "room_information",
   "room_type",
   "room_price",
-  "range_of_date",
-  "reservation_date",
   "accommodation_price",
   "status",
   "amended_from",
   "section_break_14",
-  "test_button",
-  "room_test"
+  "room_selection"
  ],
  "fields": [
   {
@@ -101,24 +100,19 @@
    "options": "On the way\nChecked In\nCancelled"
   },
   {
-   "fieldname": "room_test",
-   "fieldtype": "Table",
-   "label": "Room Test",
-   "options": "Room Child"
-  },
-  {
    "fieldname": "section_break_14",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "test_button",
-   "fieldtype": "Button",
-   "label": "Test Button"
+   "fieldname": "room_selection",
+   "fieldtype": "Table",
+   "label": "Room Selection",
+   "options": "Room Table"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-10-31 16:05:52.226115",
+ "modified": "2022-11-15 11:00:49.223702",
  "modified_by": "Administrator",
  "module": "Hotel Management",
  "name": "Reservation",

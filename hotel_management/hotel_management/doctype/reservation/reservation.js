@@ -18,9 +18,42 @@ frappe.ui.form.on("Reservation", {
 		refresh_field("accommodation_price");
 
 	},
+	onload: function(frm){
+		frm.set_query("room_name","room_selection", function(){
+			let a = ''
+			frm.doc.room_selection.forEach(row => {
+				a = row.room_type
+			});
+			return {
+				"filters": {
+					"status":"Available",
+					"type": a,
+				}
+			};
+		})
+	},
+	setup: function(frm){
+		frm.check_duplicate_room = function(frm, row){
+			frm.doc.room_selection.forEach(item => {
+				if(row.room_name=='' || row.idx == item.idx){
+					//pass
+				}else {
+					if(row.room_name==item.room_name){
+						row.room_name ='';
+						frappe.throw("Sorry!!! Room can't be duplicate.")
+						frm.clear_table('room_name')
+					}
+				}
+			});
+		}
+	}
 })
-
-
+frappe.ui.form.on("Room Table", {
+	room_name: function(frm, cdt ,cdn){
+		let row = locals[cdt][cdn];
+		frm.check_duplicate_room(frm, row);
+	},
+})
 const calculateDate = (check_in = '', check_out ='') => {
 	var day = 0
 	const date1 = new Date(check_in);
